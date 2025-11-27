@@ -586,13 +586,6 @@
                 "elevationOfPrivilege": 0
               },
               "isWebApplication": null
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
             }
           },
           {
