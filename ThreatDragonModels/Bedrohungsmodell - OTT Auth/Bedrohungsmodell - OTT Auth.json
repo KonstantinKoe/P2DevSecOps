@@ -567,7 +567,7 @@
                   "severity": "TBD",
                   "type": "Repudiation",
                   "description": "Attacker repudiates to malicious API calls\n\nAttacker denies to have obtained access to API. \nCAPEC-545\nDREA:2\n\n",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "mitigation": "Log API-calls accordingly -> secure them \nASVS 16.2.1 Verify that each log entry includes necessary metadata \nDREA:1",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 107,
@@ -580,11 +580,19 @@
               "threatFrequency": {
                 "spoofing": 0,
                 "tampering": 0,
-                "repudiation": 2,
+                "repudiation": 3,
                 "informationDisclosure": 0,
                 "denialOfService": 0,
                 "elevationOfPrivilege": 0
-              }
+              },
+              "isWebApplication": null
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
@@ -2554,13 +2562,6 @@
                 "denialOfService": 0,
                 "elevationOfPrivilege": 0
               }
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
             }
           },
           {
