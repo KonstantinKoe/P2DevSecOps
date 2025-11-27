@@ -267,8 +267,8 @@
                   "status": "Open",
                   "severity": "TBD",
                   "type": "Spoofing",
-                  "description": "An attacker obtains an authoritative or reputable signer's private signature key\nCAPEC-474\n\nAttack ID: T1552 Unsecured Credentials\nDREA: 3,7\n",
-                  "mitigation": "N/A",
+                  "description": "An attacker obtains an authoritative or reputable signer's private signature key in order to login.\nCAPEC-474\n\nAttack ID: T1552 Unsecured Credentials\nDREA: 5,25\n",
+                  "mitigation": "The login page could ask for additional verification steps. Probably not more secure than private key. With a zero trust policy one can make sure that even if an attacker is capable of legitimately logging on as someone else only that user is affected.\nDREA: 5,25",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 103,
@@ -281,7 +281,7 @@
                   "severity": "TBD",
                   "type": "Elevation of privilege",
                   "description": "Attacker gains access to admin-interface\n\nT1068\nCapec: 233\nDREA 7,6",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "mitigation": "D3-APA Access Policy Administration\nSecure the access for admins -> only with secure devices, IP-filtering, geo-fencing\nZero trust policy\nDREA:3,75",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 108,
@@ -293,12 +293,12 @@
               "handlesCardPayment": null,
               "handlesGoodsOrServices": null,
               "threatFrequency": {
-                "spoofing": 2,
+                "spoofing": 4,
                 "tampering": 0,
                 "repudiation": 0,
                 "informationDisclosure": 0,
                 "denialOfService": 0,
-                "elevationOfPrivilege": 2
+                "elevationOfPrivilege": 5
               }
             }
           },
@@ -421,8 +421,8 @@
                   "status": "Open",
                   "severity": "TBD",
                   "type": "Denial of service",
-                  "description": "An attacker floods the auth service with new auth requests which lead to overload and dos for auth server.\n\nAttack: T1621 Multi-Factor Authentication Request Generation \nCAPEC-488\nDrea: 5",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "description": "An attacker floods the auth service with new auth requests which lead to overload and dos for auth server.\n\nAttack: T1621 Multi-Factor Authentication Request Generation \nCAPEC-488\nDrea: 8",
+                  "mitigation": "Rate limit api auth access / block if excessive -> through captcha bot detection\nraise alert\nD3-ANET Authentication Event Thresholding\nDREA:4\n",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 104,
@@ -442,7 +442,7 @@
                 "tampering": 0,
                 "repudiation": 0,
                 "informationDisclosure": 0,
-                "denialOfService": 2,
+                "denialOfService": 3,
                 "elevationOfPrivilege": 0
               }
             }
@@ -585,13 +585,6 @@
                 "denialOfService": 0,
                 "elevationOfPrivilege": 0
               }
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
             }
           },
           {
@@ -2039,7 +2032,7 @@
                   "severity": "TBD",
                   "type": "Tampering",
                   "description": "Attacker manipulates Data in Database through SQL injection\nCapec 66\nAttack: T1565 \nDREA:10",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "mitigation": "Input validation, check users input -> prepared statements\nASVS 1.2.4 Verify that data selection or database queries \nDrea 3\n",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 106,
@@ -2047,7 +2040,7 @@
                 }
               ],
               "threatFrequency": {
-                "tampering": 2,
+                "tampering": 3,
                 "repudiation": 0,
                 "informationDisclosure": 0,
                 "denialOfService": 0
@@ -2545,8 +2538,8 @@
                   "status": "Open",
                   "severity": "TBD",
                   "type": "Information disclosure",
-                  "description": "A malicious insider could gain access to SIEM server and get information on sensitive data\nMitre  T1005 \nCAPEC‑640 Insider Threat",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "description": "A malicious insider could gain access to SIEM server and get information on sensitive data\nMitre  T1005 \nCAPEC‑640 Insider Threat\nDREA:6,25",
+                  "mitigation": "only log necessary and restrict to only admins, Access Logging  & Alerting\nMASVS-STORAGE-1 The app securely stores sensitive data.\nDREA: 4",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 105,
@@ -2557,10 +2550,17 @@
                 "spoofing": 0,
                 "tampering": 0,
                 "repudiation": 0,
-                "informationDisclosure": 1,
+                "informationDisclosure": 3,
                 "denialOfService": 0,
                 "elevationOfPrivilege": 0
               }
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
