@@ -267,7 +267,7 @@
                   "status": "Open",
                   "severity": "TBD",
                   "type": "Spoofing",
-                  "description": "An attacker obtains an authoritative or reputable signer's private signature key\nCAPEC-474\n\nAttack ID: T1552 Unsecured Credentials\n",
+                  "description": "An attacker obtains an authoritative or reputable signer's private signature key\nCAPEC-474\n\nAttack ID: T1552 Unsecured Credentials\nDREA: 3,7\n",
                   "mitigation": "N/A",
                   "modelType": "STRIDE",
                   "new": false,
@@ -280,7 +280,7 @@
                   "status": "Open",
                   "severity": "TBD",
                   "type": "Elevation of privilege",
-                  "description": "Attacker gains access to admin-interface\n\nT1068\nCapec: 233\n",
+                  "description": "Attacker gains access to admin-interface\n\nT1068\nCapec: 233\nDREA 7,6",
                   "mitigation": "Provide remediation for this threat or a reason if status is N/A",
                   "modelType": "STRIDE",
                   "new": false,
@@ -293,12 +293,12 @@
               "handlesCardPayment": null,
               "handlesGoodsOrServices": null,
               "threatFrequency": {
-                "spoofing": 1,
+                "spoofing": 2,
                 "tampering": 0,
                 "repudiation": 0,
                 "informationDisclosure": 0,
                 "denialOfService": 0,
-                "elevationOfPrivilege": 1
+                "elevationOfPrivilege": 2
               }
             }
           },
@@ -417,11 +417,11 @@
               "threats": [
                 {
                   "id": "cbe42515-c6ef-4214-a543-6ebf76a1ee53",
-                  "title": "New STRIDE threat",
+                  "title": "Denial of service through flooding",
                   "status": "Open",
                   "severity": "TBD",
                   "type": "Denial of service",
-                  "description": "An attacker floods the auth service with new auth requests which lead to overload and dos for auth server.\n\nAttack: T1621 Multi-Factor Authentication Request Generation \nCAPEC-488",
+                  "description": "An attacker floods the auth service with new auth requests which lead to overload and dos for auth server.\n\nAttack: T1621 Multi-Factor Authentication Request Generation \nCAPEC-488\nDrea: 5",
                   "mitigation": "Provide remediation for this threat or a reason if status is N/A",
                   "modelType": "STRIDE",
                   "new": false,
@@ -442,7 +442,7 @@
                 "tampering": 0,
                 "repudiation": 0,
                 "informationDisclosure": 0,
-                "denialOfService": 1,
+                "denialOfService": 2,
                 "elevationOfPrivilege": 0
               }
             }
@@ -566,7 +566,7 @@
                   "status": "Open",
                   "severity": "TBD",
                   "type": "Repudiation",
-                  "description": "Attacker repudiates to malicious API calls\n\nAttacker denies to have obtained access to API. \nCAPEC-545\n\n",
+                  "description": "Attacker repudiates to malicious API calls\n\nAttacker denies to have obtained access to API. \nCAPEC-545\nDREA:2\n\n",
                   "mitigation": "Provide remediation for this threat or a reason if status is N/A",
                   "modelType": "STRIDE",
                   "new": false,
@@ -580,11 +580,18 @@
               "threatFrequency": {
                 "spoofing": 0,
                 "tampering": 0,
-                "repudiation": 1,
+                "repudiation": 2,
                 "informationDisclosure": 0,
                 "denialOfService": 0,
                 "elevationOfPrivilege": 0
               }
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
@@ -2031,7 +2038,7 @@
                   "status": "Open",
                   "severity": "TBD",
                   "type": "Tampering",
-                  "description": "Attacker manipulates Data in Database through SQL injection\nCapec 66\nAttack: T1565 ",
+                  "description": "Attacker manipulates Data in Database through SQL injection\nCapec 66\nAttack: T1565 \nDREA:10",
                   "mitigation": "Provide remediation for this threat or a reason if status is N/A",
                   "modelType": "STRIDE",
                   "new": false,
@@ -2040,7 +2047,7 @@
                 }
               ],
               "threatFrequency": {
-                "tampering": 1,
+                "tampering": 2,
                 "repudiation": 0,
                 "informationDisclosure": 0,
                 "denialOfService": 0
