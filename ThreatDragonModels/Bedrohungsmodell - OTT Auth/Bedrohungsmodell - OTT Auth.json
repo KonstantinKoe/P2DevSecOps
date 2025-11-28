@@ -265,27 +265,27 @@
                   "id": "e579ad8a-89ca-49af-8799-56bb6a16c5e2",
                   "title": "Spoofing by Key theft",
                   "status": "Open",
-                  "severity": "TBD",
+                  "severity": "Medium",
                   "type": "Spoofing",
                   "description": "An attacker obtains an authoritative or reputable signer's private signature key in order to login.\nCAPEC-474\n\nAttack ID: T1552 Unsecured Credentials\nDREA: 5,25\n",
                   "mitigation": "The login page could ask for additional verification steps. Probably not more secure than private key. With a zero trust policy one can make sure that even if an attacker is capable of legitimately logging on as someone else only that user is affected.\nDREA: 5,25",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 103,
-                  "score": ""
+                  "score": "21"
                 },
                 {
                   "id": "f8b68d95-a7ef-4299-96e5-c66b5530a256",
                   "title": "An attacker could gain access to Admin Panel",
                   "status": "Open",
-                  "severity": "TBD",
+                  "severity": "Low",
                   "type": "Elevation of privilege",
                   "description": "Attacker gains access to admin-interface\n\nT1068\nCapec: 233\nDREA 7,6",
                   "mitigation": "D3-APA Access Policy Administration\nSecure the access for admins -> only with secure devices, IP-filtering, geo-fencing\nZero trust policy\nDREA:3,75",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 108,
-                  "score": ""
+                  "score": "15"
                 }
               ],
               "hasOpenThreats": true,
@@ -293,12 +293,12 @@
               "handlesCardPayment": null,
               "handlesGoodsOrServices": null,
               "threatFrequency": {
-                "spoofing": 4,
+                "spoofing": 5,
                 "tampering": 0,
                 "repudiation": 0,
                 "informationDisclosure": 0,
                 "denialOfService": 0,
-                "elevationOfPrivilege": 5
+                "elevationOfPrivilege": 6
               }
             }
           },
@@ -419,14 +419,14 @@
                   "id": "cbe42515-c6ef-4214-a543-6ebf76a1ee53",
                   "title": "Denial of service through flooding",
                   "status": "Open",
-                  "severity": "TBD",
+                  "severity": "Medium",
                   "type": "Denial of service",
-                  "description": "An attacker floods the auth service with new auth requests which lead to overload and dos for auth server.\n\nAttack: T1621 Multi-Factor Authentication Request Generation \nCAPEC-488\nDrea: 8",
-                  "mitigation": "Rate limit api auth access / block if excessive -> through captcha bot detection\nraise alert\nD3-ANET Authentication Event Thresholding\nDREA:4\n",
+                  "description": "An attacker floods the auth service with new auth requests which lead to overload and dos for auth server.\n\nAttack: T1621 Multi-Factor Authentication Request Generation \nCAPEC-488\nDrea: 8,25 8:10:5:10",
+                  "mitigation": "Rate limit api auth access / block if excessive -> through captcha bot detection\nraise alert\nD3-ANET Authentication Event Thresholding\nDREA:5 8:2:0:10\n",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 104,
-                  "score": ""
+                  "score": "20"
                 }
               ],
               "hasOpenThreats": true,
@@ -442,7 +442,7 @@
                 "tampering": 0,
                 "repudiation": 0,
                 "informationDisclosure": 0,
-                "denialOfService": 3,
+                "denialOfService": 5,
                 "elevationOfPrivilege": 0
               }
             }
@@ -1197,38 +1197,6 @@
             "vertices": []
           },
           {
-            "shape": "trust-boundary-curve",
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Boundary",
-              "name": "verschlüsselt",
-              "description": "",
-              "isTrustBoundary": true,
-              "hasOpenThreats": false
-            },
-            "labels": [
-              "verschlüsselt"
-            ],
-            "id": "d08c8abb-a985-4adf-87f0-e45f4b7479a6",
-            "source": {
-              "x": -290,
-              "y": 340
-            },
-            "target": {
-              "x": -110,
-              "y": 180
-            },
-            "vertices": [
-              {
-                "x": -90,
-                "y": 320
-              }
-            ]
-          },
-          {
             "shape": "flow",
             "attrs": {
               "line": {
@@ -1665,6 +1633,57 @@
               {
                 "x": 220,
                 "y": -100
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "ruft ab",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "ruft ab"
+            ],
+            "id": "1ee28a49-c674-4f56-83b7-034cb9fe4bf1",
+            "source": {
+              "cell": "1d45b3be-f4ce-439f-bfaa-e43cec01cab6",
+              "port": "2c32761d-c521-4720-ad71-e9795cab8326"
+            },
+            "target": {
+              "cell": "c2716661-ef88-48a8-8d0f-724e1923d562",
+              "port": "d3f1aeac-8d0b-4c92-80db-d9f7931270da"
+            },
+            "vertices": [
+              {
+                "x": 150,
+                "y": 270
               }
             ]
           },
