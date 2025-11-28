@@ -20,8 +20,8 @@
         "cells": [
           {
             "position": {
-              "x": -18,
-              "y": 100
+              "x": -248,
+              "y": -47
             },
             "size": {
               "width": 160,
@@ -590,142 +590,6 @@
           },
           {
             "position": {
-              "x": -108,
-              "y": 470
-            },
-            "size": {
-              "width": 120,
-              "height": 120
-            },
-            "attrs": {
-              "text": {
-                "text": "Kundentelefon-\nanbieter"
-              },
-              "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
-                "strokeDasharray": null
-              }
-            },
-            "visible": true,
-            "shape": "process",
-            "zIndex": 5,
-            "ports": {
-              "groups": {
-                "top": {
-                  "position": "top",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                },
-                "right": {
-                  "position": "right",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                },
-                "bottom": {
-                  "position": "bottom",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                },
-                "left": {
-                  "position": "left",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                }
-              },
-              "items": [
-                {
-                  "group": "top",
-                  "id": "186a9010-11e3-422d-9190-aaab2b8e42e2"
-                },
-                {
-                  "group": "right",
-                  "id": "9503f16d-c0f5-4610-a9b2-a8c7615cfc52"
-                },
-                {
-                  "group": "bottom",
-                  "id": "574ede30-7c8e-4879-bc37-6ea9a1fcc320"
-                },
-                {
-                  "group": "left",
-                  "id": "c4507836-3638-4f8e-995f-842a6d7aa634"
-                }
-              ]
-            },
-            "id": "fd7303e8-29d2-4d76-bf7d-87eb619ede69",
-            "data": {
-              "name": "Kundentelefon-\nanbieter",
-              "description": "",
-              "type": "tm.Process",
-              "isTrustBoundary": false,
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "threats": [
-                {
-                  "id": "31607411-287a-47ff-b617-eba251187f8c",
-                  "title": "Spoofing von Kundendaten",
-                  "status": "Mitigated",
-                  "severity": "Low",
-                  "type": "Spoofing",
-                  "description": "Angreifer kann sich als \"legitimer\" Kunde ausgeben, um an kritische Daten / Dienste zu gelangen zu denen er eigentlich keinen Zugriff haben dürfte (Social Engineering beim Kundendienst).\n\nCAPEC ID: 148: Content Spoofing: An adversary modifies content to make it contain something other than what the original content producer intended while keeping the apparent source of the content unchanged.\nAtt&ck: T1557 (Adversary-in-the-Middle)\n\nD: 9 / R: 8 / E: 5 / A: 4 / DREA: 26",
-                  "mitigation": "Personal schulen, Kritische Kundendaten als solche für Mitarbeiter in der Support-Software markieren, um Irrtümer zu vermeiden. \n\nDefend Matrix: D3-NTCD: Network Traffic Community Deviation\nASVS: 1.8.1 : Verify that all sensitive data is identified and classified into protection levels.\n\nD: 4 / R: 4 / E: 2 / A: 4 / Neuer DREA: 14",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 102,
-                  "score": "14"
-                }
-              ],
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "protocol": "",
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "handlesCardPayment": null,
-              "handlesGoodsOrServices": null
-            }
-          },
-          {
-            "position": {
               "x": 1105,
               "y": -80
             },
@@ -1077,68 +941,6 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Boundary",
-              "name": "Externer Service für T\nelefonnummernauflö\nsung",
-              "description": "",
-              "isTrustBoundary": true,
-              "hasOpenThreats": false
-            },
-            "labels": [
-              {
-                "attrs": {
-                  "label": {
-                    "text": "Firma Allsecure"
-                  }
-                },
-                "position": {
-                  "distance": 0,
-                  "offset": 25.336937022630487
-                }
-              }
-            ],
-            "id": "8c690a8a-f100-4c4d-bd88-095a530ac220",
-            "source": {
-              "x": 241,
-              "y": 135
-            },
-            "target": {
-              "x": 246,
-              "y": 138
-            },
-            "vertices": [
-              {
-                "x": 241,
-                "y": 450
-              },
-              {
-                "x": 810,
-                "y": 390
-              },
-              {
-                "x": 638,
-                "y": -46
-              },
-              {
-                "x": 550,
-                "y": -204
-              },
-              {
-                "x": 340,
-                "y": -174
-              },
-              {
-                "x": 243,
-                "y": -8
-              }
-            ]
-          },
-          {
-            "shape": "trust-broundary-curve",
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Boundary",
               "name": "Externer Service für \nTelefonnummernauflösung (Telco)",
               "description": "",
               "isTrustBoundary": true,
@@ -1184,117 +986,6 @@
               {
                 "x": 945,
                 "y": 169
-              }
-            ]
-          },
-          {
-            "shape": "trust-broundary-curve",
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Boundary",
-              "name": "Externer Service für\nden Versand des OTT",
-              "description": "",
-              "isTrustBoundary": true,
-              "hasOpenThreats": false
-            },
-            "labels": [
-              {
-                "attrs": {
-                  "label": {
-                    "text": "Telefonanbieter"
-                  }
-                },
-                "position": {
-                  "distance": 0.1607609674711048,
-                  "offset": 15.4290577443574
-                }
-              }
-            ],
-            "id": "5d5f2170-50ee-404a-99f3-b55e2f657730",
-            "source": {
-              "x": -140,
-              "y": 459
-            },
-            "target": {
-              "x": -141,
-              "y": 459
-            },
-            "vertices": [
-              {
-                "x": -220,
-                "y": 459
-              },
-              {
-                "x": -290,
-                "y": 505
-              },
-              {
-                "x": -260,
-                "y": 594
-              },
-              {
-                "x": 5,
-                "y": 594
-              },
-              {
-                "x": 30,
-                "y": 466
-              },
-              {
-                "x": -100,
-                "y": 459
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Nummer auslesen",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "labels": [
-              "Nummer auslesen"
-            ],
-            "id": "173e6c33-8e25-4c5e-bc33-9c78bbdeaaad",
-            "source": {
-              "cell": "fd7303e8-29d2-4d76-bf7d-87eb619ede69"
-            },
-            "target": {
-              "cell": "2e16a416-e822-44a0-8501-2d54aa8add4f"
-            },
-            "vertices": [
-              {
-                "x": -10,
-                "y": 650
               }
             ]
           },
@@ -1459,52 +1150,6 @@
                 "y": 190
               }
             ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "überwacht",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "labels": [
-              "überwacht"
-            ],
-            "id": "ef160ad0-bf4b-4041-bb3e-62d42cea7cbc",
-            "source": {
-              "cell": "1d45b3be-f4ce-439f-bfaa-e43cec01cab6",
-              "port": "40051107-6899-46f0-86f5-00904f03948c"
-            },
-            "target": {
-              "cell": "94f68ce7-aa88-45a4-ba41-c0b62d6a959c",
-              "port": "513547d9-3479-497d-816a-76b914114871"
-            },
-            "vertices": []
           },
           {
             "shape": "flow",
@@ -1740,6 +1385,10 @@
               {
                 "x": 530,
                 "y": 270
+              },
+              {
+                "x": 270,
+                "y": 210
               }
             ]
           },
@@ -1819,7 +1468,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "2a. Telefonnummer",
+              "name": "Log(Login)",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -1832,26 +1481,23 @@
               "threats": []
             },
             "labels": [
-              {
-                "attrs": {
-                  "label": {
-                    "text": "Telefonnummer, OTT"
-                  }
-                },
-                "position": 0.5
-              }
+              "Log(Login)"
             ],
-            "id": "3f9c3edd-4fe5-4fc4-9239-2ca13291fc25",
+            "id": "81c8482c-19ed-41ab-bae2-a5561223b4b5",
             "source": {
               "cell": "94f68ce7-aa88-45a4-ba41-c0b62d6a959c"
             },
             "target": {
-              "cell": "fd7303e8-29d2-4d76-bf7d-87eb619ede69"
+              "cell": "c2716661-ef88-48a8-8d0f-724e1923d562"
             },
             "vertices": [
               {
-                "x": 140,
-                "y": 430
+                "x": 559.5,
+                "y": -60
+              },
+              {
+                "x": 530,
+                "y": -90
               }
             ]
           },
@@ -1875,7 +1521,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Log(Login, OTT, Phone Number)",
+              "name": "Lookup Telefonnummer",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -1888,19 +1534,137 @@
               "threats": []
             },
             "labels": [
-              "Log(Login, OTT, Phone Number)"
+              "Lookup Telefonnummer"
             ],
-            "id": "81c8482c-19ed-41ab-bae2-a5561223b4b5",
+            "id": "d6853fbf-ec57-4144-8896-c7b7778eb43f",
             "source": {
-              "cell": "94f68ce7-aa88-45a4-ba41-c0b62d6a959c"
+              "x": 550,
+              "y": 130
             },
             "target": {
-              "cell": "c2716661-ef88-48a8-8d0f-724e1923d562"
+              "cell": "2e16a416-e822-44a0-8501-2d54aa8add4f",
+              "port": "5d90bb40-e6df-48eb-a2b3-b8da950b88c9"
             },
             "vertices": [
               {
-                "x": 559.5,
+                "x": 450,
+                "y": 170
+              },
+              {
+                "x": 370,
+                "y": 280
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "überwacht",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "überwacht"
+            ],
+            "id": "ef160ad0-bf4b-4041-bb3e-62d42cea7cbc",
+            "source": {
+              "cell": "1d45b3be-f4ce-439f-bfaa-e43cec01cab6",
+              "port": "40051107-6899-46f0-86f5-00904f03948c"
+            },
+            "target": {
+              "cell": "94f68ce7-aa88-45a4-ba41-c0b62d6a959c",
+              "port": "513547d9-3479-497d-816a-76b914114871"
+            },
+            "vertices": []
+          },
+          {
+            "shape": "trust-broundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Externer Service für T\nelefonnummernauflö\nsung",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            },
+            "labels": [
+              {
+                "attrs": {
+                  "label": {
+                    "text": "Firma Allsecure"
+                  }
+                },
+                "position": {
+                  "distance": 0,
+                  "offset": 25.336937022630487
+                }
+              }
+            ],
+            "id": "8c690a8a-f100-4c4d-bd88-095a530ac220",
+            "source": {
+              "x": 140,
+              "y": 100
+            },
+            "target": {
+              "x": 140,
+              "y": 100
+            },
+            "vertices": [
+              {
+                "x": 80,
+                "y": 510
+              },
+              {
+                "x": 570,
+                "y": 550
+              },
+              {
+                "x": 810,
+                "y": 390
+              },
+              {
+                "x": 670,
                 "y": -60
+              },
+              {
+                "x": 550,
+                "y": -204
+              },
+              {
+                "x": 340,
+                "y": -174
+              },
+              {
+                "x": 220,
+                "y": -100
               }
             ]
           },
@@ -2050,8 +1814,8 @@
           },
           {
             "position": {
-              "x": -280,
-              "y": 500
+              "x": 220,
+              "y": 300
             },
             "size": {
               "width": 120,
@@ -2417,7 +2181,7 @@
           },
           {
             "position": {
-              "x": 280,
+              "x": 398,
               "y": 320
             },
             "size": {
